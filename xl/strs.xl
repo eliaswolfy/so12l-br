@@ -3,25 +3,25 @@
 # istrs.xl.
 
 EXPORT SPressZToStart:
- DS Press [Z] to start
+ DS Pressione [Z] para comecar
 
 EXPORT SPressZToLoad:
- DS Press [Z] to resume saved game
+ DS Pressione [Z] para continuar jogo salvo
 
 EXPORT SPressZToContinue:
- DS Press ACTION to continue
+ DS Pressione ACTION para continuar
 
 EXPORT AErasePrompt:
  DB 3
- DS ERASE save??
- DS Press [Z] 15 times to confirm.
- DS Press [X] to cancel.
+ DS DELETAR jogo salvo??
+ DS Pressione [Z] 15 vezes para confirmar.
+ DS Pressione [X] para cancelar.
 
 EXPORT SGameOver:
- DS GAME OVER
+ DS FIM DE JOGO
 
 EXPORT SItsDark:
- DS It's dark!
+ DS Esta escuro!
 
 EXPORT AInvActions:
  DB 8
@@ -30,66 +30,66 @@ EXPORT AInvActions:
  DS .
  DS .
  DS .
- DS Remove
- DS Use
- DS Examine
- DS Discard
+ DS Remover
+ DS Usar
+ DS Examinar
+ DS Discartar
 
 EXPORT SInventory:
- DS Inventory
+ DS Inventario
 
 EXPORT SCantUseThis:
- DS  can't use this.
+ DS  nao posso usar isso.
 
 EXPORT SMustFirstRemove:
- DS  must first remove
+ DS  e preciso remover primeiro
 
 EXPORT ATwoHandedShieldConflict:
  DB 2
- DS A two-handed weapon can't be
- DS used with a shield.
+ DS Uma arma de duas mãos não
+ DS pode ser usada com um escudo
 
 EXPORT SCantRemoveInvFull:
- DS Can't remove. Inventory full.
+ DS Nao posso remover. Inventario cheio.
 
 EXPORT SCantRemoveCursed:
- DS Can't remove. Item is cursed.
+ DS Nao posso remover. Item esta amaldicoado.
 
 EXPORT SCantDiscardLooksImportant:
- DS Can't discard this. It looks important.
+ DS Não posso descartar isso. Parece importante.
 
 EXPORT SReallyDiscard:
- DS Really discard
+ DS Vai realmente descartar
 
 EXPORT ACancelDiscard:
  DB 2
- DS No, cancel.
- DS Yes, discard.
+ DS Nao, cancele.
+ DS Sim, discarte.
 
 EXPORT AItkNames:
  DB 15
- DS armor
- DS helm
- DS weapon
- DS ranged weapon
- DS shield
- DS boot
- DS belt
- DS amulet
- DS ring
- DS wand
- DS scroll
- DS potion
- DS food
- DS thing
- DS quest
+ DS armadura
+ DS leme
+ DS arma
+ DS arma de longo alcance
+ DS escudo
+ DS bota
+ DS cinto
+ DS amuleto
+ DS anel
+ DS varinha
+ DS pergaminho
+ DS pocao
+ DS comida
+ DS coisa
+ DS convidado
 
 EXPORT AClassNames:
  DB 4
- SClassFighter:; DS Fighter
- SClassPaladin:; DS Paladin
- SClassArcher:;  DS Archer
- SClassWizard:;  DS Wizard
+ SClassFighter:; DS Guerreiro
+ SClassPaladin:; DS Paladino
+ SClassArcher:;  DS Arqueiro
+ SClassWizard:;  DS Mago
 # Needed for PSHEET_Draw:
 AClassNamePtrs:
  DW SClassFighter
@@ -98,85 +98,85 @@ AClassNamePtrs:
  DW SClassWizard
 
 EXPORT SSaving:
- DS Saving...
+ DS Salvando...
 
 EXPORT SSaveWarning:
- DS Do not power off or remove cartridge.
+ DS Nao desligue nem remova o cartucho.
 
 EXPORT SGameSaved:
- DS Game saved.
+ DS Jogo salvo.
 
 EXPORT AGeneralMenu:
  DB 4
- DS Interact
- DS Items
- DS Cast spell
- DS Party info
+ DS Interagir
+ DS Itens
+ DS Lancar feitico
+ DS Equipe
 
 EXPORT ANoRangedWeapon:
  DB 3
- DS No ranged weapon.
- DS To equip a ranged weapon, use
- DS the inventory screen.
+ DS Sem arma de longo alcance
+ DS Para equipar uma arma de longo alcance,
+ DS use a tela de inventario.
 
 EXPORT ANoMeleeWeapon:
  DB 3
- DS No melee weapon.
- DS To equip a melee weapon, use
- DS the inventory screen.
+ DS Nenhuma arma branca.
+ DS Para equipar uma arma branca,
+ DS use a tela de inventario.
 
 EXPORT SWhoWillCast:
- DS Who will cast?
+ DS Quem vai lancar o feitico?
 
 EXPORT SKnowsNoSpells:
- DS  does not know any spells.
+ DS  nao sabe nenhum feitico.
 
 EXPORT SChooseSpell:
- DS Choose spell (
+ DS Escolha feitico (
 
 EXPORT ANotEnoughSp:
  DB 1
- DS Not enough spell points.
+ DS Nao ha pontos de feitico suficientes.
 
 EXPORT SBuyWhat:
- DS What do you want to buy?
+ DS O que vai comprar?
 
 EXPORT SNoItemsToSell:
- DS No items to sell.
+ DS Sem itens para vender.
 
 EXPORT ADontSellSell:
  DB 2
- DS No, don't sell.
- DS Yes, sell.
+ DS Nao, nao vender.
+ DS Sim, vender.
 
 EXPORT SNotEnoughGold:
- DS Not enough gold.
+ DS Ouro insuficiente.
 
 EXPORT SLearnedNewSpell:
- DS  learned a new spell:
+ DS  Aprendeu novo feitico:
 
 EXPORT SAlreadyKnewSpell:
- DS You already know this spell:
+ DS Voce ja sabe esse feitico:
 
 EXPORT ASpellMustBeCastInBattle:
  DB 2
- DS This spell can only be cast
- DS while engaged in combat.
+ DS Este feitico so pode ser
+ DS lancado durante o combate.
 
 EXPORT ASpellCannotBeCastInBattle:
  DB 2
- DS This spell can't be cast 
- DS while engaged in combat.
+ DS Este feitico nao pode ser
+ DS lancado durante o combate.
 
 EXPORT ABatActions:
  DB 7
- DS Attack
- DS Arrow
- DS Spell
+ DS Atacar
+ DS Flecha
+ DS Feitico
  DS Item
- DS Move ->
- DS Move <-
- DS Pass
+ DS Mover ->
+ DS Mover <-
+ DS Passar
  # IMPORTANT: If the order or number of these
  # change, you also need to update the
  # logic in BatHandleCharTurn that replaces
@@ -184,16 +184,16 @@ EXPORT ABatActions:
 
 EXPORT ABatMoveAdvanceFail:
  DB 2
- DS Can't advance. Enemies are in
- DS the way. Defeat them first.
+ DS Nao pode avancar. Os inimigos estao
+ DS no caminho. Derrote-os primeiro.
 
 EXPORT ABatMoveRetreatFail:
  DB 1
- DS Can't retreat further.
+ DS Não é possivel recuar mais.
 
 EXPORT ABatNoFoesInRange:
  DB 1
- DS No enemies in range.
+ DS Nenhum inimigo ao alcance.
 
 EXPORT BsPalmapPenumbra:
  DB 0 0 0 1 1 4 3 2 4 3 5 4 2 4 3
@@ -207,7 +207,7 @@ EXPORT BsBatBgColor:
  DB 5 1 3 12 2 1 10 1 1
 
 EXPORT SReceived:
- DS You received
+ DS Voce recebeu
 
 EXPORT ABatNoItems:
  DB 2
@@ -242,47 +242,45 @@ EXPORT SNothingEquipped:
  DS  has nothing equipped.
 
 EXPORT STheEnd:
- DS - THE END -
+ DS - O FIM -
 
 EXPORT ACutSceneStrings:
  DB 16
- DS Resting...
- DS Resting at the inn...
- DS Town of Riverside
- DS Forest Village
- DS Old Tower
- DS Pinnacle Town
- DS Sun Port
- DS Castle South
- DS Monastery
- DS Sand Haven
- DS Town of Umbra
- DS Town of Glacies
- DS Westport Town
- DS North Keep
+ DS Descansando...
+ DS Descansando na pousada...
+ DS Cidade de Riverside
+ DS Vila da Floresta
+ DS Antiga Torre
+ DS Cidade de Pinnacle
+ DS Porto do Sol
+ DS Castelo do Sul
+ DS Monasterio
+ DS Refugio de Areia
+ DS Cidade de Umbra
+ DS Cidade de Glacies
+ DS Cidade de Westport
+ DS Fortaleza do Norte
  DS Ignis
- DS Indigo Town
+ DS Cidade de Indigo
 
 EXPORT ARegularItem:
- DT (No further info)
+ DT (Sem mais informacoes)
 
 EXPORT AStory:
  DT STORY
- .. Your name is Alex.
+ .. Seu nome e Alex.
  ..
- .. After months at sea, you and your
- .. brother Leon have arrived in Riverside,
- .. capital of the prosperous Twelve Lands.
+ .. Depois de meses no mar, você e seu
+ .. irmão Leon chegaram a Riverside, capital das prósperas Doze Ilhas.
  ..
- .. Perhaps you will become heroes, sung
- .. throughout the land. Or perhaps you will
- .. just die pathetically on that first battle
- .. that was supposed to be easy. Who knows?
- .. Only one way to find out.
+ .. Talvez vocês se tornem heróis, cantados
+ .. por toda a terra. Ou talvez vocês
+ .. morram pateticamente naquela primeira batalha
+ .. que deveria ser fácil. Quem sabe?
+ .. Só há uma maneira de descobrir.
 
 EXPORT ANothingToInteract:
- DT Nothing to interact
- .. with here.
+ DT Nada de interessa aqui.
 
 EXPORT SCopyright:
  DS Copyright (c) 2019 by Bruno Oliveira. All rights reserved.
